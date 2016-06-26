@@ -1,0 +1,62 @@
+2016-06-26 11:38:30.046 [main] INFO   - Example1
+2016-06-26 11:38:30.055 [main] INFO   - 
+Name: CargoTaxi
+Price: 4000
+Fuel consumption: 10
+Load: 3000
+Name: Convertible
+Price: 5000
+Fuel consumption: 12
+Seats 2
+State: false
+Name: PassengerTaxi
+Price: 3000
+Fuel consumption: 8
+Seats 4
+2016-06-26 11:38:30.055 [main] INFO   - 
+Total auto price: 12000
+2016-06-26 11:38:30.056 [main] INFO   - 
+After sort: 
+Name: PassengerTaxi
+Price: 3000
+Fuel consumption: 8
+Seats 4
+Name: CargoTaxi
+Price: 4000
+Fuel consumption: 10
+Load: 3000
+Name: Convertible
+Price: 5000
+Fuel consumption: 12
+Seats 2
+State: false
+2016-06-26 11:38:30.056 [main] INFO   - 
+Found car: 
+Name: CargoTaxi
+Price: 4000
+Fuel consumption: 10
+Load: 3000
+2016-06-26 11:38:30.056 [main] INFO   - Example2
+2016-06-26 11:38:30.059 [main] WARN   - java.lang.NumberFormatException: For input string: "error"
+2016-06-26 11:38:30.059 [main] INFO   - 
+Name: Convertible
+Price: 5000
+Fuel consumption: 12
+Seats 2
+State: false
+Name: PassengerTaxi
+Price: 3000
+Fuel consumption: 8
+Seats 4
+2016-06-26 11:38:30.059 [main] INFO   - Example3
+2016-06-26 11:38:30.062 [main] WARN   - by.bsuir.taxi.exception.FileParseException
+2016-06-26 11:38:30.062 [main] INFO   - 
+Name: Convertible
+Price: 5000
+Fuel consumption: 12
+Seats 2
+State: false
+Name: PassengerTaxi
+Price: 3000
+Fuel consumption: 8
+Seats 4

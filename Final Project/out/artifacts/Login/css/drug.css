@@ -1,0 +1,20 @@
+table{
+    width: 99%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 0;
+}
+table tr th {
+    color: #0080ad;
+    border-color: #2DB3E0;
+    border-bottom: 3px solid;
+    text-align: left;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+table tr td{
+    border: 1px solid #2DB3E0;
+    padding: 8px 20px;
+    vertical-align: top;
+}

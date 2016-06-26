@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<banks>
+	<deposit type="urgent">
+		<name>BPS</name>
+		<country>Belarus</country>
+		<depositor>Mitar Alex</depositor>
+		<accountId>1</accountId>
+		<depositAmount>900000</depositAmount>
+		<profitability>15</profitability>
+		<depositTime>18</depositTime>
+	</deposit>
+	<deposit type="onDemand">
+		<name>BelAgroProm</name>
+		<country>Belarus</country>
+		<depositor>Ivan Chachov</depositor>
+		<accountId>2</accountId>
+		<depositAmount>1200000</depositAmount>
+		<profitability>10</profitability>
+		<checkAccount>2093405</checkAccount>
+	</deposit>
+	<deposit type="metal">
+		<name>BelSwith</name>
+		<country>Belarus</country>
+		<depositor>Lena Krashaya</depositor>
+		<accountId>3</accountId>
+		<depositAmount>500000</depositAmount>
+		<profitability>30</profitability>
+	</deposit>
+</banks>
+	

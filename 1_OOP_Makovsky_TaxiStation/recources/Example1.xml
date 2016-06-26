@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<car_park>
+    <car name="CARGOTAXI">
+        <price>4000</price>
+        <fuelConsumption>10</fuelConsumption>
+        <load>3000</load>
+    </car>
+    <car name="CONVERTIBLE">
+        <price>5000</price>
+        <fuelConsumption>12</fuelConsumption>
+        <seats>2</seats>
+    </car>
+    <car name="PASSENGERTAXI">
+        <price>3000</price>
+        <fuelConsumption>8</fuelConsumption>
+        <seats>4</seats>
+    </car>
+</car_park>

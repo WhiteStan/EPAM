@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.com/banks"
+	xmlns:tns="http://www.example.com/banks"
+	elementFormDefault="qualified">
+	
+	<element name="banks">
+		<complexType>
+			<sequence>
+				<element name="deposit"
+						type="tns:Deposit"
+						minOccurs="0"
+						maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="Deposit">
+		<sequence>
+			<element name="name">
+				<simpleType>
+					<restriction base="string">
+						<pattern value="^[a-z ,.'-]+$"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="country" type="string" />
+			<element name="depositor" type="string" />
+			<element name="accountId" type="ID" />
+			<element name="depositAmount" type="positiveInteger" />
+			<element name="profitability">
+				<simpleType>
+					<restriction base="integer">
+						<minInclusive value="0"/>
+						<maxInclusive value="100"/>
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+		<attribute name="type" default="onDemand">
+		<simpleType>
+			<restriction base="string">
+				<enumeration value="urgent"></enumeration>
+				<enumeration value="onDemand"></enumeration>
+				<enumeration value="rollup"></enumeration>
+				<enumeration value="savings"></enumeration>
+				<enumeration value="calculated"></enumeration>
+				<enumeration value="metal"></enumeration>
+			</restriction>
+		</simpleType>
+		</attribute>
+	</complexType>
+
+	<complexType name="DepositOnDemand">
+		<complexContent>
+			<extension base="tns:Deposit">
+				<sequence>
+					<element name="checkAccount" type="positiveInteger" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="DepositUrgent">
+		<complexContent>
+			<extension base="tns:Deposit">
+				<sequence>
+					<element name="depositTime" type="positiveInteger" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<element name="deposit" type="tns:Deposit"></element>
+	<element name="depositOnDemand" type="tns:DepositOnDemand" substitutionGroup="tns:deposit"></element>
+	<element name="depositUrgent" type="tns:DepositUrgent" substitutionGroup="tns:deposit"></element>
+	
+</schema>

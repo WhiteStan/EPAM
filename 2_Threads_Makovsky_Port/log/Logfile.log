@@ -1,0 +1,49 @@
+2016-03-15 12:09:48.314 [main] INFO   - Ship number 721 Contains before unloading 84
+2016-03-15 12:09:48.316 [main] INFO   - Ship number 160 Contains before unloading 68
+2016-03-15 12:09:48.316 [main] INFO   - Ship number 187 Contains before unloading 65
+2016-03-15 12:09:48.316 [main] INFO   - Ship number 252 Contains before unloading 87
+2016-03-15 12:09:48.316 [main] INFO   - Ship number 605 Contains before unloading 4
+2016-03-15 12:09:48.316 [main] INFO   - Ship number 261 Contains before unloading 60
+2016-03-15 12:09:48.317 [main] INFO   - Ship number 764 Contains before unloading 55
+2016-03-15 12:09:48.317 [main] INFO   - Ship number 894 Contains before unloading 6
+2016-03-15 12:09:48.317 [main] INFO   - Ship number 861 Contains before unloading 40
+2016-03-15 12:09:48.317 [main] INFO   - Ship number 477 Contains before unloading 6
+2016-03-15 12:09:48.319 [Thread-3] INFO   - Received dock 145
+2016-03-15 12:09:48.319 [Thread-5] INFO   - Received dock 782
+2016-03-15 12:09:48.319 [Thread-2] INFO   - Received dock 511
+2016-03-15 12:09:48.320 [Thread-1] INFO   - Received dock 384
+2016-03-15 12:09:48.321 [Thread-4] INFO   - Received dock 850
+2016-03-15 12:09:48.384 [Thread-5] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:48.385 [Thread-3] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:48.386 [Thread-1] WARN   - by.bsuir.port.exception.CargoOverflowException
+2016-03-15 12:09:48.388 [Thread-2] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:53.723 [Thread-4] WARN   - by.bsuir.port.exception.CargoOverflowException
+2016-03-15 12:09:53.767 [Thread-5] WARN   - by.bsuir.port.exception.CargoOverflowException
+2016-03-15 12:09:53.767 [Thread-5] WARN   - by.bsuir.port.exception.CargoOverflowException
+2016-03-15 12:09:53.767 [Thread-5] INFO   - Ship number 605 Contains after unloading 100
+2016-03-15 12:09:53.767 [Thread-8] INFO   - Received dock 782
+2016-03-15 12:09:53.767 [Thread-4] WARN   - by.bsuir.port.exception.CargoOverflowException
+2016-03-15 12:09:53.768 [Thread-4] WARN   - by.bsuir.port.exception.CargoOverflowException
+2016-03-15 12:09:53.768 [Thread-4] INFO   - Ship number 252 Contains after unloading 100
+2016-03-15 12:09:53.768 [Thread-7] INFO   - Received dock 850
+2016-03-15 12:09:53.771 [Thread-8] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:53.772 [Thread-8] WARN   - by.bsuir.port.exception.CargoOverflowException
+2016-03-15 12:09:53.772 [Thread-8] WARN   - by.bsuir.port.exception.CargoOverflowException
+2016-03-15 12:09:53.772 [Thread-8] INFO   - Ship number 894 Contains after unloading 100
+2016-03-15 12:09:53.773 [Thread-7] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:53.773 [Thread-7] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:53.773 [Thread-7] INFO   - Ship number 764 Contains after unloading 34
+2016-03-15 12:09:54.393 [Thread-10] INFO   - Received dock 782
+2016-03-15 12:09:54.393 [Thread-3] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:54.859 [Thread-9] INFO   - Received dock 850
+2016-03-15 12:09:54.866 [Thread-3] INFO   - Ship number 187 Contains after unloading 11
+2016-03-15 12:09:54.866 [Thread-9] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:54.866 [Thread-9] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:54.868 [Thread-6] INFO   - Received dock 145
+2016-03-15 12:09:54.869 [Thread-9] INFO   - Ship number 861 Contains after unloading 40
+2016-03-15 12:09:55.733 [Thread-6] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:55.733 [Thread-2] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:09:55.733 [Thread-10] WARN   - j2016-03-15 12:14:46.956 [Thread-1] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:14:46.957 [Thread-1] WARN   - java.lang.ArrayIndexOutOfBoundsException: -1
+2016-03-15 12:14:46.957 [Thread-1] INFO   - Ship number 18 Contains after unloading 56
+2016-03-15 12:14:46.961 [main] INFO   - Storage 0
