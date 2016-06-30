@@ -6,8 +6,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.annotation.PreDestroy;
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -17,9 +15,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * Created by Lenovo on 13.04.2016.
- */
 public class ConnectionPool {
     private final int POOL_SIZE = 20;
     private final static String URL = "jdbc:mysql://localhost:3306/epam_project";
@@ -30,6 +25,9 @@ public class ConnectionPool {
     private final static Logger LOG = LogManager.getLogger(ConnectionPool.class);
     private static AtomicBoolean isCreated = new AtomicBoolean(false);
 
+    /**
+     * Implementation of a connection pool to the database.
+     */
     private ConnectionPool() {
         try {
             DriverManager.registerDriver(new Driver());
@@ -87,14 +85,15 @@ public class ConnectionPool {
         try {
             TimeUnit.SECONDS.sleep(CLOSE_TIMEOUT_SEC);
             for (ProxyConnector connection : connectionQueue) {
-                    connection.close();
+                connection.close();
                 LOG.info("Close connect");
             }
         } catch (InterruptedException ex) {
             LOG.warn("Release connection exception", ex);
         }
     }
-    public int getPoolSize(){
+
+    public int getPoolSize() {
         return connectionQueue.size();
     }
 

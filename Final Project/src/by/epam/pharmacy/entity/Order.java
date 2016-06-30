@@ -3,9 +3,6 @@ package by.epam.pharmacy.entity;
 
 import java.util.Date;
 
-/**
- * Created by Lenovo on 11.06.2016.
- */
 public class Order {
     private int totalPrice;
     private String login;

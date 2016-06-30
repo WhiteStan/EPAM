@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 10.06.2016.
+ * Command to delete drug
  */
 public class DeleteDrugCommand implements ActionCommand {
     @Override

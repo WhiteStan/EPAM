@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 
 /**
- * Created by Lenovo on 05.05.2016.
+ * Command to list all drugs in database
  */
 public class DrugListCommand implements ActionCommand {
     private static final String PARAM_LIST = "drugList";

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 /**
- * Created by Lenovo on 10.06.2016.
+ * Command to add some drug to user basket
  */
 public class AddToBasketCommand implements ActionCommand {
     private static final String PARAM_LIST = "lst";
@@ -17,7 +17,6 @@ public class AddToBasketCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) {
         String page = (String) request.getSession().getAttribute(JspParamName.PARAM_PAGE);
-        String[] locale = ((String) request.getSession().getAttribute(JspParamName.PARAM_LOCALE)).split("_");
         request.setAttribute(JspParamName.PARAM_LOCALE, request.getParameter(JspParamName.PARAM_LOCALE));
         HashSet<String> basket;
         basket = (HashSet<String>) request.getSession().getAttribute("basket");

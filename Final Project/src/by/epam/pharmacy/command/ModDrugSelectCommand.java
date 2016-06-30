@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 10.06.2016.
+ * Command to select a drug for modification
  */
 public class ModDrugSelectCommand implements ActionCommand {
     @Override

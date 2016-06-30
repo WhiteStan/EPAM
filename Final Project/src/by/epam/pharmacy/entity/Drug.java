@@ -1,8 +1,5 @@
 package by.epam.pharmacy.entity;
 
-/**
- * Created by Lenovo on 05.05.2016.
- */
 public class Drug {
     private int idDrugs;
     private String name;
@@ -14,15 +11,15 @@ public class Drug {
     private boolean recipeNeed;
     private String description;
 
-    public Drug(){
+    public Drug() {
 
     }
-    public Drug(String name, String internationalName, int price, int amount,
+
+    public Drug(String name, String internationalName, int price,
                 String measurementUnit, int inStock, boolean recipeNeed, String description) {
         this.name = name;
         this.internationalName = internationalName;
         this.price = price;
-        this.amount = amount;
         this.measurementUnit = measurementUnit;
         this.inStock = inStock;
         this.recipeNeed = recipeNeed;

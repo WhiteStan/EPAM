@@ -5,7 +5,7 @@ import by.epam.pharmacy.resource.JspParamName;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by Lenovo on 21.06.2016.
+ * Command to retrieve on a last page
  */
 public class BackCommand implements ActionCommand {
     @Override

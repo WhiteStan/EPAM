@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 14.04.2016.
+ * Command to register new user
  */
 public class RegisterCommand implements ActionCommand {
     private static final String PARAM_LOGIN = "login";

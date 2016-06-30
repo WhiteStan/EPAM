@@ -8,9 +8,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
-/**
- * Created by Lenovo on 14.06.2016.
- */
 public class RetrieveOrdersLogic {
     private final static Logger LOG = LogManager.getLogger(LoginLogic.class);
 
@@ -21,8 +18,7 @@ public class RetrieveOrdersLogic {
             orders = orderDAO.findAll();
         } catch (DAOException e) {
             LOG.error(e);
-        }
-        finally {
+        } finally {
             orderDAO.closeConnection();
         }
         return orders;

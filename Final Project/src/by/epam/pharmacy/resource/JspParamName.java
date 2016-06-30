@@ -1,8 +1,5 @@
 package by.epam.pharmacy.resource;
 
-/**
- * Created by Lenovo on 25.04.2016.
- */
 public class JspParamName {
     public static final String PARAM_LOCALE = "lang";
     public static final String PARAM_LOGIN = "login";
@@ -17,9 +14,8 @@ public class JspParamName {
     public static final String PARAM_AMOUNT = "amount";
     public static final String PARAM_PRICE = "price";
     public static final String PARAM_MEASURE_UNIT = "measuremntUnit";
-    public static final String PARAM_IN_STOCK= "inStock";
+    public static final String PARAM_IN_STOCK = "inStock";
     public static final String PARAM_RECIPE_NEED = "recipeNeed";
     public static final String PARAM_DESCRIPTION = "description";
     public static final String PARAM_DRUGNAME = "drugName";
-    public static final String PARAM_PASSPORTID = "passportId";
 }

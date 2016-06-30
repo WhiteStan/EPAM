@@ -1,22 +1,17 @@
 package by.epam.pharmacy.command;
 
-import by.epam.pharmacy.entity.Drug;
-import by.epam.pharmacy.logic.AddRecipeLogic;
 import by.epam.pharmacy.logic.AddRecipeRequestLogic;
-import by.epam.pharmacy.logic.DrugListLogic;
 import by.epam.pharmacy.resource.JspParamName;
 import by.epam.pharmacy.resource.JspPathName;
 import by.epam.pharmacy.resource.MessageManager;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 16.06.2016.
+ * Command to request new recipe by user
  */
 public class RequestRecipeCommand implements ActionCommand {
-    private static final String PARAM_LIST = "lst";
 
     @Override
     public String execute(HttpServletRequest request) {

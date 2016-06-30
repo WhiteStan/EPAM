@@ -1,6 +1,8 @@
 package by.epam.pharmacy.command;
-import by.epam.pharmacy.command.*;
 
+/**
+ * Contains names of all application command and associated command classes
+ */
 public enum CommandEnum {
     LOGIN {
         {
@@ -12,57 +14,57 @@ public enum CommandEnum {
             this.command = new LogoutCommand();
         }
     },
-    LOCALE{
+    LOCALE {
         {
             this.command = new LocaleCommand();
         }
     },
-    REGISTER{
+    REGISTER {
         {
             this.command = new RegisterCommand();
         }
     },
-    OPENPAGE{
+    OPENPAGE {
         {
             this.command = new OpenPageCommand();
         }
     },
-    DRUGLIST{
+    DRUGLIST {
         {
             this.command = new DrugListCommand();
         }
     },
-    ADDDRUG{
+    ADDDRUG {
         {
             this.command = new AddDrugCommand();
         }
     },
-    DELETEDRUG{
+    DELETEDRUG {
         {
             this.command = new DeleteDrugCommand();
         }
     },
-    DRUGSELECT{
+    DRUGSELECT {
         {
             this.command = new ModDrugSelectCommand();
         }
     },
-    MODDRUGCOMMIT{
+    MODDRUGCOMMIT {
         {
             this.command = new ModDrugCommitCommand();
         }
     },
-    OPENBASKET{
+    OPENBASKET {
         {
             this.command = new OpenBasketCommand();
         }
     },
-    ADDTOBASKET{
+    ADDTOBASKET {
         {
             this.command = new AddToBasketCommand();
         }
     },
-    MAKEORDER{
+    MAKEORDER {
         {
             this.command = new MakeOrderCommand();
         }
@@ -72,77 +74,78 @@ public enum CommandEnum {
             this.command = new OpenDoctorPageCommand();
         }
     },
-    CONFIRMRECIPES{
+    CONFIRMRECIPES {
         {
             this.command = new ConfirmRecipesCommand();
         }
     },
-    OPENDRUGPAGE{
+    OPENDRUGPAGE {
         {
             this.command = new OpenDrugPageCommand();
         }
     },
-    SEARCHDRUGGIST{
+    SEARCHDRUGGIST {
         {
             this.command = new SearchDruggistCommand();
         }
     },
-    MANAGEORDERS{
+    MANAGEORDERS {
         {
             this.command = new ManageOrdersCommand();
         }
     },
-    CONFIRMORDERS{
+    CONFIRMORDERS {
         {
             this.command = new ConfirmOrdersCommand();
         }
     },
-    OPENRECIPEPAGE{
+    OPENRECIPEPAGE {
         {
             this.command = new OpenRecipePageCommand();
         }
     },
-    REQUESTRECIPE{
+    REQUESTRECIPE {
         {
             this.command = new RequestRecipeCommand();
         }
     },
-    CONFIRMRECIPEREQUEST{
+    CONFIRMRECIPEREQUEST {
         {
             this.command = new ConfirmRecipeRequestCommand();
         }
     },
-    OPENRECIPECONFIRMATIONPAGE{
+    OPENRECIPECONFIRMATIONPAGE {
         {
             this.command = new OpenRecipeConfirmationPageCommand();
         }
     },
-    ADDRECIPE{
+    ADDRECIPE {
         {
             this.command = new AddRecipeCommand();
         }
     },
-    SEARCHORDER{
+    SEARCHORDER {
         {
             this.command = new SearchOrderCommand();
         }
     },
-    CHECKOUTORDER{
+    CHECKOUTORDER {
         {
             this.command = new CheckoutOrderCommand();
         }
     },
-    ADDPRODUCT{
+    ADDPRODUCT {
         {
             this.command = new AddProductCommand();
         }
     },
-    BACK{
+    BACK {
         {
             this.command = new BackCommand();
         }
     };
     ActionCommand command;
+
     public ActionCommand getCurrentCommand() {
         return command;
     }

@@ -17,18 +17,19 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 14.06.2016.
+ * Command to confirm received orders
  */
 public class ConfirmOrdersCommand implements ActionCommand {
     private final static Logger LOG = LogManager.getLogger(RegisterUserLogic.class);
 
     private static final String PARAM_LIST = "orders";
+
     @Override
     public String execute(HttpServletRequest request) {
         String page;
-        String login = (String)request.getSession().getAttribute(JspParamName.PARAM_LOGIN);
+        String login = (String) request.getSession().getAttribute(JspParamName.PARAM_LOGIN);
         String[] locale = ((String) request.getSession().getAttribute(JspParamName.PARAM_LOCALE)).split("_");
-        ArrayList<Order> orders = (ArrayList<Order>)request.getSession().getAttribute(PARAM_LIST);
+        ArrayList<Order> orders = (ArrayList<Order>) request.getSession().getAttribute(PARAM_LIST);
         try {
             for (Order order : orders) {
                 String timeOfDelivery = request.getParameter(order.getId() + "TimeOfDelivery");
@@ -45,12 +46,11 @@ public class ConfirmOrdersCommand implements ActionCommand {
                 order.setTimeOfDelivery(dateTime);
                 order.setId(order.getId());
             }
-        }
-        catch (ParseException e){
+        } catch (ParseException e) {
             LOG.error(e);
         }
         ConfirmOrdersLogic confirmOrdersLogic = new ConfirmOrdersLogic();
-        if(!confirmOrdersLogic.confirm(orders)){
+        if (!confirmOrdersLogic.confirm(orders)) {
             MessageManager messageManager = new MessageManager(new Locale(locale[0], locale[1]));
             request.setAttribute(JspParamName.PARAM_ERROR_DATABASE,
                     messageManager.getProperty("message.errorDataBase"));

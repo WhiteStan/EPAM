@@ -6,7 +6,7 @@ import by.epam.pharmacy.resource.JspParamName;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by Lenovo on 30.03.2016.
+ * Command to change localization
  */
 public class LocaleCommand implements ActionCommand {
     @Override

@@ -10,7 +10,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- * Created by Lenovo on 20.06.2016.
+ * Defines method which displayed users menu.
  */
 public class MenuTag extends TagSupport {
     private String role;
@@ -76,7 +76,7 @@ public class MenuTag extends TagSupport {
                             "                </li>\n" +
                             "                <li>\n" +
                             "                    <a href=\"controller?command=openPage&page=/jsp/orderSearch.jsp\">\n" +
-                            messageManager.getProperty("label.manageOrders") +
+                            messageManager.getProperty("label.checkoutOrder") +
                             "                    </a>\n" +
                             "                </li>" +
                             "                <li>\n" +

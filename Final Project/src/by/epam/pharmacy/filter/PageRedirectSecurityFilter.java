@@ -1,9 +1,5 @@
 package by.epam.pharmacy.filter;
 
-/**
- * Created by Lenovo on 22.04.2016.
- */
-
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -29,7 +25,6 @@ public class PageRedirectSecurityFilter implements Filter {
                          FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
-// переход на заданную страницу
         httpResponse.sendRedirect(httpRequest.getContextPath() + indexPath);
         chain.doFilter(request, response);
     }

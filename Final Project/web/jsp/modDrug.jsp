@@ -80,11 +80,11 @@
             <fmt:message key="label.recipeNeed" bundle="${ rb }" />
         </label>
         <span>
-            <input type="radio" name="recipeNeed" value="Male" checked />
+            <input type="radio" name="recipeNeed" value="true" checked />
             <b><fmt:message key="label.yes" bundle="${ rb }" /></b>
         </span>
         <span>
-            <input type="radio" name="recipeNeed" value="Female" />
+            <input type="radio" name="recipeNeed" value="false" />
             <b><fmt:message key="label.no" bundle="${ rb }" /></b>
         </span>
     </div><br/><br/>
@@ -93,9 +93,9 @@
             <fmt:message key="label.measurmUnit" bundle="${ rb }" />
         </label>
         <select name="measurmUnit">
-            <option value="1"><fmt:message key="label.pills" bundle="${ rb }" /></option>
-            <option value="2"><fmt:message key="label.ml" bundle="${ rb }" /></option>
-            <option value="3"><fmt:message key="label.mg" bundle="${ rb }" /></option>
+            <option value="таблетки"><fmt:message key="label.pills" bundle="${ rb }" /></option>
+            <option value="мл"><fmt:message key="label.ml" bundle="${ rb }" /></option>
+            <option value="мг"><fmt:message key="label.mg" bundle="${ rb }" /></option>
         </select>
     </div><br/><br/>
     <input type="submit" name="command" id="regist-submit" value="<fmt:message key="label.modRecipes" bundle="${ rb }" />"/>

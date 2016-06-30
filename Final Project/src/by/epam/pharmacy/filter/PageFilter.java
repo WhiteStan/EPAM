@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * Created by Lenovo on 21.06.2016.
+ * Implements the following methods from the interface {@link Filter}: init, destroy, doFilter
  */
 @WebFilter(urlPatterns = {"/*"})
 public class PageFilter implements Filter {
@@ -21,7 +21,7 @@ public class PageFilter implements Filter {
             throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
         String command = httpServletRequest.getParameter("command");
-        if(command != null && !command.equals("Back")) {
+        if (command != null && !command.equals("Back")) {
             String curPage = (String) httpServletRequest.getSession().getAttribute("page");
             httpServletRequest.getSession().setAttribute("lastPage", curPage);
         }

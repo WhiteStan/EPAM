@@ -9,14 +9,20 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Created by Lenovo on 10.04.2016.
+ * Utility class whose method create MD5 hash code by string
  */
 public class Encryptor {
     private final static Logger LOG = LogManager.getLogger(Encryptor.class);
 
+    /**
+     * Returns a string which contains MD5 hash code which was created by string which was passed as parameter.
+     *
+     * @param src a string on which is created MD5 hash code
+     * @return a string which contains MD5 hash code which was created by string which was passed as parameter
+     */
     public static String getHash(String src) {
         String result = new String();
-        if(src != null) {
+        if (src != null) {
             try {
                 MessageDigest messageDigest = MessageDigest.getInstance("MD5");
                 messageDigest.reset();

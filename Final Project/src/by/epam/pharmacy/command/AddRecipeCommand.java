@@ -1,8 +1,6 @@
 package by.epam.pharmacy.command;
 
-import by.epam.pharmacy.entity.Drug;
 import by.epam.pharmacy.entity.Recipe;
-import by.epam.pharmacy.logic.AddDrugLogic;
 import by.epam.pharmacy.logic.AddRecipeLogic;
 import by.epam.pharmacy.resource.JspParamName;
 import by.epam.pharmacy.resource.JspPathName;
@@ -12,11 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 16.06.2016.
+ * Command to add new recipe for some user by doctor
  */
 public class AddRecipeCommand implements ActionCommand {
     private static final String PARAM_TERM = "term";
     private static final String PARAM_AMOUNT = "amountOfDrug";
+
     @Override
     public String execute(HttpServletRequest request) {
         String page;
@@ -39,7 +38,7 @@ public class AddRecipeCommand implements ActionCommand {
         recipe.setDoctorLogin(doctorLogin);
         recipe.setMeasurementUnit(measureUnit);
         AddRecipeLogic addRecipeLogic = new AddRecipeLogic();
-        if(!addRecipeLogic.add(recipe)){
+        if (!addRecipeLogic.add(recipe)) {
             MessageManager messageManager = new MessageManager(new Locale(locale[0], locale[1]));
             request.setAttribute(JspParamName.PARAM_ERROR_DATABASE,
                     messageManager.getProperty("message.errorDataBase"));

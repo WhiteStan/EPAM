@@ -6,9 +6,6 @@ import by.epam.pharmacy.exception.DAOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * Created by Lenovo on 11.06.2016.
- */
 public class AddRecipeLogic {
     private final static Logger LOG = LogManager.getLogger(RegisterUserLogic.class);
 
@@ -20,8 +17,7 @@ public class AddRecipeLogic {
             result = true;
         } catch (DAOException e) {
             LOG.error(e);
-        }
-        finally {
+        } finally {
             recipeDAO.closeConnection();
         }
         return result;

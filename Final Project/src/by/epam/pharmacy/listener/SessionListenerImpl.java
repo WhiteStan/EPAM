@@ -9,9 +9,6 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
-/**
- * Created by Lenovo on 22.04.2016.
- */
 @WebListener
 public class SessionListenerImpl implements HttpSessionListener {
     private final String DEFAULT_LOCALE = "ru_RU";
@@ -28,6 +25,6 @@ public class SessionListenerImpl implements HttpSessionListener {
     }
 
     public void sessionDestroyed(HttpSessionEvent sessionEvent) {
-        LOG.error("Session Destroyed:: ID="+sessionEvent.getSession().getId());
+        LOG.error("Session Destroyed:: ID=" + sessionEvent.getSession().getId());
     }
 }

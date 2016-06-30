@@ -11,6 +11,9 @@ import by.epam.pharmacy.resource.MessageManager;
 
 import java.util.Locale;
 
+/**
+ * Command to login in the system
+ */
 public class LoginCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) {

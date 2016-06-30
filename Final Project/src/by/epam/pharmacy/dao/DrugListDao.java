@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Lenovo on 05.05.2016.
+ * DAO for work with `drugs` table
  */
 public class DrugListDao extends AbstractDAO {
     private final static String GET_ALL_DRUGS = "SELECT iddrugs, `name`, internationalName, price," +
@@ -93,8 +93,8 @@ public class DrugListDao extends AbstractDAO {
         try {
             st = connection.prepareStatement(DELETE_DRUG);
             st.setString(1, name);
-            int checkUpdate =  st.executeUpdate();
-            if(checkUpdate != 0) {
+            int checkUpdate = st.executeUpdate();
+            if (checkUpdate != 0) {
                 result = true;
             }
         } catch (SQLException e) {
@@ -134,9 +134,11 @@ public class DrugListDao extends AbstractDAO {
         try {
             st = connection.prepareStatement(ADD_IN_STOCK);
             st.setInt(1, amount);
-            st.setString(2,drugName);
-            st.executeUpdate();
-            result = true;
+            st.setString(2, drugName);
+            int updatedRows = st.executeUpdate();
+            if (updatedRows != 0) {
+                result = true;
+            }
         } catch (SQLException e) {
             throw new DAOException(e);
         } finally {
@@ -214,7 +216,7 @@ public class DrugListDao extends AbstractDAO {
         return drug;
     }
 
-    public boolean reduceInStock(String name, int amount) throws DAOException{
+    public boolean reduceInStock(String name, int amount) throws DAOException {
         PreparedStatement st = null;
         boolean result = false;
         try {

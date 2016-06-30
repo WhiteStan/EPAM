@@ -1,8 +1,5 @@
 package by.epam.pharmacy.entity;
 
-/**
- * Created by Lenovo on 11.06.2016.
- */
 public class RecipeConfirmation {
     private boolean confirmation;
     private int Id;

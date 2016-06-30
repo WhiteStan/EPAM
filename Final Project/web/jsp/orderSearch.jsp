@@ -13,21 +13,25 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/common.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <title>Title</title>
+    <title><fmt:message key="label.title" bundle="${ rb }" /></title>
 </head>
 <body>
 <%@ include file="common/header.jsp"%>
-<div>
-    <form name="searchForm" method="POST" action="controller">
-        <input type="hidden" name="command" value="searchOrder"/>
-        <input type="text" name="orderId" pattern="[0-9]*" required/>
-        <input type="submit" value="<fmt:message key="label.search" bundle="${ rb }" />" />
-    </form>
-</div>
+<form name="searchForm" method="POST" action="controller">
+    <input type="hidden" name="command" value="searchOrder" />
+    <div class="login-field">
+        <label class = "login-label">
+            <fmt:message key="label.orderId" bundle="${ rb }" />
+        </label>
+        <input type="text" name="orderId" value=""/>
+    </div>
+    <br/>
+    <input type="submit" name="command" value="<fmt:message key="label.search" bundle="${ rb }" />"/>
+</form>
 ${errorDataBase}
 <%@ include file="common/footer.jsp" %>
 </body>

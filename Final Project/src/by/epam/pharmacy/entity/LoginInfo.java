@@ -1,10 +1,7 @@
 package by.epam.pharmacy.entity;
 
-
-/**
- * Created by Lenovo on 10.04.2016.
- */
-public class LoginInfo {
+public class
+LoginInfo {
     private String login;
     private String password;
     private String role;
@@ -15,13 +12,8 @@ public class LoginInfo {
     private Integer postal;
     private Sex sex;
     private String passportId;
-    public LoginInfo() {
-    }
 
-    public LoginInfo(String login, String password, String email) {
-        this.login = login;
-        this.password = password;
-        this.email = email;
+    public LoginInfo() {
     }
 
     public LoginInfo(String login, String password, String email, String name, String address,
@@ -37,11 +29,6 @@ public class LoginInfo {
         this.passportId = passportId;
     }
 
-    public LoginInfo(String login, String password) {
-        this.login = login;
-        this.password = password;
-    }
-
     public String getName() {
         return name;
     }
@@ -50,9 +37,13 @@ public class LoginInfo {
         this.name = name;
     }
 
-    public String getRole(){ return role; }
+    public String getRole() {
+        return role;
+    }
 
-    public void setRole(String role) { this.role = role; }
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public String getEmail() {
         return email;
@@ -102,7 +93,6 @@ public class LoginInfo {
         this.login = login;
     }
 
-    //TODO: not frindly
     public String getPassword() {
         return password;
     }
@@ -110,6 +100,7 @@ public class LoginInfo {
     public void setPassword(String password) {
         this.password = password;
     }
+
     public String getPassportId() {
         return passportId;
     }

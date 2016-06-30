@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 10.06.2016.
+ * Command to add new drug by druggist
  */
 public class AddDrugCommand implements ActionCommand {
     @Override
@@ -18,21 +18,16 @@ public class AddDrugCommand implements ActionCommand {
         String page;
         String name = request.getParameter(JspParamName.PARAM_NAME);
         String internName = request.getParameter(JspParamName.PARAM_INTERN_NAME);
-        String strAmount = request.getParameter(JspParamName.PARAM_AMOUNT);
         String strPrice = request.getParameter(JspParamName.PARAM_PRICE);
         String measureUnit = request.getParameter(JspParamName.PARAM_MEASURE_UNIT);
         String strInStock = request.getParameter(JspParamName.PARAM_IN_STOCK);
         String strIsRecipeNeed = request.getParameter(JspParamName.PARAM_RECIPE_NEED);
         String description = request.getParameter(JspParamName.PARAM_DESCRIPTION);
         Integer inStock = null;
-        Integer amount = null;
         Integer price = null;
         Boolean isRecipeNeed = null;
         if (strInStock != null) {
             inStock = Integer.parseInt(strInStock);
-        }
-        if (strAmount != null) {
-            amount = Integer.parseInt(strAmount);
         }
         if (strPrice != null) {
             price = Integer.parseInt(strPrice);
@@ -41,10 +36,10 @@ public class AddDrugCommand implements ActionCommand {
             isRecipeNeed = Boolean.parseBoolean(strIsRecipeNeed);
         }
         String[] locale = ((String) request.getSession().getAttribute(JspParamName.PARAM_LOCALE)).split("_");
-        Drug drug = new Drug(name, internName, price, amount, measureUnit,
+        Drug drug = new Drug(name, internName, price, measureUnit,
                 inStock, isRecipeNeed, description);
         AddDrugLogic addDrug = new AddDrugLogic();
-        if(!addDrug.add(drug)){
+        if (!addDrug.add(drug)) {
             MessageManager messageManager = new MessageManager(new Locale(locale[0], locale[1]));
             request.setAttribute(JspParamName.PARAM_ERROR_DATABASE,
                     messageManager.getProperty("message.errorDataBase"));

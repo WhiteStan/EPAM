@@ -1,7 +1,6 @@
 package by.epam.pharmacy.command;
 
 import by.epam.pharmacy.entity.Recipe;
-import by.epam.pharmacy.logic.AddRecipeRequestLogic;
 import by.epam.pharmacy.logic.ConfirmRecipeRequestLogic;
 import by.epam.pharmacy.resource.JspParamName;
 import by.epam.pharmacy.resource.JspPathName;
@@ -11,10 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 16.06.2016.
+ * Command to prolong recipes for users
  */
-public class ConfirmRecipeRequestCommand implements ActionCommand{
-    private static final String PARAM_LIST = "lst";
+public class ConfirmRecipeRequestCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -27,17 +25,17 @@ public class ConfirmRecipeRequestCommand implements ActionCommand{
         strId = request.getParameter("requestRecipe");
         String strAmount = request.getParameter(strId + "Amount");
         String term = request.getParameter(strId + "Term");
-        if(strId != null){
+        if (strId != null) {
             id = Integer.parseInt(strId);
         }
-        if(strAmount != null){
+        if (strAmount != null) {
             amount = Integer.parseInt(strAmount);
         }
         Recipe recipe = new Recipe();
         recipe.setAmount(amount);
         recipe.setTerm(term);
         ConfirmRecipeRequestLogic confirmRecipeRequestLogic = new ConfirmRecipeRequestLogic();
-        if(!confirmRecipeRequestLogic.confirm(id, recipe)){
+        if (!confirmRecipeRequestLogic.confirm(id, recipe)) {
             MessageManager messageManager = new MessageManager(new Locale(locale[0], locale[1]));
             request.setAttribute(JspParamName.PARAM_ERROR_DATABASE,
                     messageManager.getProperty("message.errorDataBase"));

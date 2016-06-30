@@ -1,9 +1,7 @@
 package by.epam.pharmacy.command;
 
-import by.epam.pharmacy.entity.Drug;
 import by.epam.pharmacy.entity.DrugOrdered;
 import by.epam.pharmacy.entity.Order;
-import by.epam.pharmacy.logic.DrugSelectLogic;
 import by.epam.pharmacy.logic.SearchDrugsOrderedLogic;
 import by.epam.pharmacy.logic.SearchOrderLogic;
 import by.epam.pharmacy.resource.JspParamName;
@@ -15,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 16.06.2016.
+ * Command to search for an order
  */
 public class SearchOrderCommand implements ActionCommand {
     private final static String PARAM_ORDER_ID = "orderId";

@@ -6,9 +6,6 @@ import by.epam.pharmacy.exception.DAOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * Created by Lenovo on 10.06.2016.
- */
 public class DrugSelectLogic {
     private final static Logger LOG = LogManager.getLogger(LoginLogic.class);
 
@@ -19,8 +16,7 @@ public class DrugSelectLogic {
             drug = drugListDao.findDrug(name);
         } catch (DAOException e) {
             LOG.error(e);
-        }
-        finally {
+        } finally {
             drugListDao.closeConnection();
         }
         return drug;

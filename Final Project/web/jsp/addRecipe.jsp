@@ -19,7 +19,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="http://digitalbush.com/wp-content/uploads/2013/01/jquery.maskedinput-1.3.1.min_.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/maskInput.js"></script>
-    <title>Title</title>
+    <title><fmt:message key="label.title" bundle="${ rb }" /></title>
 </head>
 <body>
 <%@ include file="common/header.jsp"%>
@@ -53,12 +53,13 @@
         <label class="regist-label">
             <fmt:message key="label.measurmUnit" bundle="${ rb }" />
         </label>
-        <select name="measurmUnit">
-            <option value="1"><fmt:message key="label.pills" bundle="${ rb }" /></option>
-            <option value="2"><fmt:message key="label.ml" bundle="${ rb }" /></option>
-            <option value="3"><fmt:message key="label.mg" bundle="${ rb }" /></option>
+        <select name="measuremntUnit">
+            <option value="таблетки"><fmt:message key="label.pills" bundle="${ rb }" /></option>
+            <option value="мл"><fmt:message key="label.ml" bundle="${ rb }" /></option>
+            <option value="мг"><fmt:message key="label.mg" bundle="${ rb }" /></option>
         </select>
     </div><br/>
+    <br/>
     <input type="submit" name="command" id="regist-submit" value="<fmt:message key="label.addRecipe" bundle="${ rb }" />"/>
     <a href="controller?command=openPage&page=/jsp/main.jsp" ><fmt:message key="label.main" bundle="${ rb }" /></a>
     <br/>

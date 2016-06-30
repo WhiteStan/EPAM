@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <title>Title</title>
+    <title><fmt:message key="label.title" bundle="${ rb }" /></title>
 </head>
 <body>
 <%@ include file="common/header.jsp"%>
@@ -36,7 +36,6 @@
         <input type="text" name="amount" pattern="[0-9]*" class="regist-input" required/>
     </div><br/>
     <input type="submit" name="command" id="regist-submit" value="<fmt:message key="label.addDrug" bundle="${ rb }" />"/>
-    <a href="controller?command=openPage&page=/jsp/main.jsp" ><fmt:message key="label.main" bundle="${ rb }" /></a>
     <br/>
 </form>
 ${errorDataBase}

@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/registration.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <title>Title</title>
+    <title><fmt:message key="label.title" bundle="${ rb }" /></title>
 </head>
 <body>
 <%@ include file="common/header.jsp"%>
@@ -59,11 +59,11 @@
             <fmt:message key="label.recipeNeed" bundle="${ rb }" />
         </label>
         <span>
-            <input type="radio" name="recipeNeed" value="Male" checked />
+            <input type="radio" name="recipeNeed" value="true" checked />
             <b><fmt:message key="label.yes" bundle="${ rb }" /></b>
         </span>
         <span>
-            <input type="radio" name="recipeNeed" value="Female" />
+            <input type="radio" name="recipeNeed" value="false" />
             <b><fmt:message key="label.no" bundle="${ rb }" /></b>
         </span>
     </div><br/>
@@ -72,10 +72,10 @@
         <label class="regist-label">
             <fmt:message key="label.measurmUnit" bundle="${ rb }" />
         </label>
-        <select name="measurmUnit">
-            <option value="1"><fmt:message key="label.pills" bundle="${ rb }" /></option>
-            <option value="2"><fmt:message key="label.ml" bundle="${ rb }" /></option>
-            <option value="3"><fmt:message key="label.mg" bundle="${ rb }" /></option>
+        <select name="measuremntUnit">
+            <option value="таблетки"><fmt:message key="label.pills" bundle="${ rb }" /></option>
+            <option value="мл"><fmt:message key="label.ml" bundle="${ rb }" /></option>
+            <option value="мг"><fmt:message key="label.mg" bundle="${ rb }" /></option>
         </select>
     </div><br/><br/>
     <input type="submit" name="command" id="regist-submit" value="<fmt:message key="label.addDrug" bundle="${ rb }" />"/>

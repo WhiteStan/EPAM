@@ -9,6 +9,9 @@ import by.epam.pharmacy.command.CommandEnum;
 
 import java.util.Locale;
 
+/**
+ * Defines command from recieved request
+ */
 public class ActionFactory {
     public ActionCommand defineCommand(HttpServletRequest request) {
         ActionCommand current = new EmptyCommand();

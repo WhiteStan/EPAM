@@ -9,7 +9,8 @@ import java.util.Properties;
 import java.util.concurrent.Executor;
 
 /**
- * Created by Lenovo on 22.04.2016.
+ * Wrapper class for database connection which implements {@link Connection} interface. Method close realizes the returns
+ * connection to the pool.
  */
 public class ProxyConnector implements Connection {
     private Connection connection;

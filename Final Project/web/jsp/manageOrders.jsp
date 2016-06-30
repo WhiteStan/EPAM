@@ -46,7 +46,7 @@
             </tr>
         </c:forEach>
 
-        <button type="submit" >Press me!</button>
+        <button type="submit" ><fmt:message key="label.confirm" bundle="${ rb }" /></button>
     </form>
 </table>
 <%@ include file="common/footer.jsp" %>

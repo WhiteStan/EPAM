@@ -1,8 +1,5 @@
 package by.epam.pharmacy.resource;
 
-/**
- * Created by Lenovo on 25.04.2016.
- */
 public class JspPathName {
     public static final String PATH_TO_INDEX_JSP = "/index.jsp";
     public static final String PATH_TO_LOGIN_JSP = "/jsp/login.jsp";
@@ -17,7 +14,6 @@ public class JspPathName {
     public static final String PATH_TO_RECIPEPAGE_JSP = "/jsp/recipePage.jsp";
     public static final String PATH_TO_RECIPE_CONFIRMATION_PAGE_JSP = "/jsp/modRecipeRequests.jsp";
     public static final String PATH_TO_DRUGPAGE_JSP = "/jsp/drugPage.jsp";
-    public static final String PATH_TO_SEARCH_JSP = "/jsp/searchPage.jsp";
     public static final String PATH_TO_MANAGEORDERS_JSP = "/jsp/manageOrders.jsp";
     public static final String PATH_TO_CHECKOUT_ORDER_JSP = "/jsp/checkoutOrder.jsp";
     public static final String PATH_TO_ADD_PRODUCT_JSP = "/jsp/addProduct.jsp";

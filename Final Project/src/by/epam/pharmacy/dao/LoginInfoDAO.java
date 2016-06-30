@@ -11,15 +11,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Lenovo on 13.04.2016.
- */
 public class LoginInfoDAO extends AbstractDAO<LoginInfo> {
     private final static String GET_ALL_USERS = "SELECT login FROM person";
     private final static String GET_USER_BY_NAME = "SELECT login,password, role FROM person WHERE login=?";
     private final static String ADD_USER = "INSERT INTO person(`login`, `password`, `name`, `e-mail`, `address`, `phoneNumber`, " +
             "`postal`, `sex`, passportId) VALUES (?,?,?,?,?,?,?,?,?)";
-    private final static Logger LOG = LogManager.getLogger(LoginInfoDAO.class);
 
     public List<LoginInfo> findAll() throws DAOException {
         List<LoginInfo> logins = new ArrayList<>();
@@ -48,13 +44,13 @@ public class LoginInfoDAO extends AbstractDAO<LoginInfo> {
             st = connection.prepareStatement(GET_USER_BY_NAME);
             st.setString(1, login);
             ResultSet resultSet = st.executeQuery();
-            if(resultSet.next()) {
+            if (resultSet.next()) {
                 resLogin = new LoginInfo();
                 resLogin.setLogin(resultSet.getString("login"));
                 resLogin.setPassword(resultSet.getString("password"));
                 resLogin.setRole(resultSet.getString("role"));
             }
-        }  catch (SQLException e) {
+        } catch (SQLException e) {
             throw new DAOException(e);
         } finally {
             connection.closeStatement(st);

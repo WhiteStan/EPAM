@@ -10,9 +10,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
-/**
- * Created by Lenovo on 11.06.2016.
- */
 public class MakeOrderLogic {
     private final static Logger LOG = LogManager.getLogger(LoginLogic.class);
 

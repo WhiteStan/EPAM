@@ -6,9 +6,6 @@ import by.epam.pharmacy.exception.DAOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * Created by Lenovo on 10.06.2016.
- */
 public class AddDrugLogic {
     private final static Logger LOG = LogManager.getLogger(RegisterUserLogic.class);
 

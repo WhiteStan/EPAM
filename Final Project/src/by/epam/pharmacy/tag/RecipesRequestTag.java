@@ -16,13 +16,14 @@ import java.util.ResourceBundle;
 public class RecipesRequestTag extends TagSupport {
     private static final String REQUEST_PARAMETER_NAME_RECIPES = "recipes";
     private ArrayList<Recipe> recipes;
+
     public void setRecipes(ArrayList<Recipe> recipes) {
         this.recipes = recipes;
     }
 
     @Override
     public int doStartTag() throws JspException {
-        Locale locale = (Locale)pageContext.getSession().getAttribute("locale");
+        Locale locale = (Locale) pageContext.getSession().getAttribute("locale");
         ResourceBundle bundle;
         if (locale != null) {
             bundle = ResourceBundle.getBundle("pagecontent", locale);
@@ -35,7 +36,7 @@ public class RecipesRequestTag extends TagSupport {
                         "                <thead>\n" +
                         "                    <th>" + bundle.getString("label.patientName") + "</th>\n" +
                         "                    <th>" + bundle.getString("label.drugName") + "</th>\n" +
-                        "                    <th>" + bundle.getString("label.amount")+ "</th>\n" +
+                        "                    <th>" + bundle.getString("label.amount") + "</th>\n" +
                         "                </thead>\n" +
                         "                <tbody>");
                 for (Recipe recipe : recipes) {

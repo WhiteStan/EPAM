@@ -1,8 +1,5 @@
 package by.epam.pharmacy.entity;
 
-/**
- * Created by Lenovo on 11.06.2016.
- */
 public class Recipe {
     private String drugName;
     private int amount;
@@ -13,9 +10,10 @@ public class Recipe {
     private String measurementUnit;
     private Boolean valid;
 
-    public Recipe(){
+    public Recipe() {
 
     }
+
     public Recipe(String drugName, Integer amount, String login) {
         this.drugName = drugName;
         this.amount = amount;

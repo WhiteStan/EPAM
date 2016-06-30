@@ -9,15 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 
 /**
- * Created by Lenovo on 14.06.2016.
+ * Command to manage orders
  */
 public class ManageOrdersCommand implements ActionCommand {
     private static final String PARAM_LIST = "orders";
     @Override
     public String execute(HttpServletRequest request) {
         String page;
-        String login = (String)request.getSession().getAttribute(JspParamName.PARAM_LOGIN);
-        String[] locale = ((String) request.getSession().getAttribute(JspParamName.PARAM_LOCALE)).split("_");
         ArrayList<Order> orders;
         RetrieveOrdersLogic retrieveOrdersLogic = new RetrieveOrdersLogic();
         orders = retrieveOrdersLogic.find();

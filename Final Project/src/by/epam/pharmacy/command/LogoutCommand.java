@@ -5,6 +5,9 @@ import javax.servlet.http.HttpServletRequest;
 import by.epam.pharmacy.resource.JspParamName;
 import by.epam.pharmacy.resource.JspPathName;
 
+/**
+ * Command to logout
+ */
 public class LogoutCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) {

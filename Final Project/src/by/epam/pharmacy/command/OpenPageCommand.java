@@ -5,7 +5,7 @@ import by.epam.pharmacy.resource.JspParamName;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by Lenovo on 16.04.2016.
+ * Command to open page specified in a parameter
  */
 public class OpenPageCommand implements ActionCommand {
     @Override

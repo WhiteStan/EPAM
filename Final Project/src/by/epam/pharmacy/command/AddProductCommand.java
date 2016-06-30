@@ -1,7 +1,5 @@
 package by.epam.pharmacy.command;
 
-import by.epam.pharmacy.entity.Drug;
-import by.epam.pharmacy.logic.AddDrugLogic;
 import by.epam.pharmacy.logic.AddProductLogic;
 import by.epam.pharmacy.resource.JspParamName;
 import by.epam.pharmacy.resource.JspPathName;
@@ -11,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 20.06.2016.
+ * Command to add products in stock of some drug
  */
 public class AddProductCommand implements ActionCommand {
     @Override
@@ -25,7 +23,7 @@ public class AddProductCommand implements ActionCommand {
         }
         String[] locale = ((String) request.getSession().getAttribute(JspParamName.PARAM_LOCALE)).split("_");
         AddProductLogic addProductLogic = new AddProductLogic();
-        if(!addProductLogic.add(name, amount)){
+        if (!addProductLogic.add(name, amount)) {
             MessageManager messageManager = new MessageManager(new Locale(locale[0], locale[1]));
             request.setAttribute(JspParamName.PARAM_ERROR_DATABASE,
                     messageManager.getProperty("message.errorDataBase"));

@@ -1,16 +1,15 @@
 package by.epam.pharmacy.entity;
 
-/**
- * Created by Lenovo on 11.06.2016.
- */
 public class DrugOrdered {
     private String name;
     private int recipe;
     private boolean recipeNeed;
     private int amount;
-    public DrugOrdered(){
+
+    public DrugOrdered() {
 
     }
+
     public DrugOrdered(String name, int recipe, int amount) {
         this.name = name;
         this.recipe = recipe;

@@ -12,28 +12,29 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 11.06.2016.
+ * Command to validate recipes
  */
-public class ConfirmRecipesCommand implements ActionCommand{
+public class ConfirmRecipesCommand implements ActionCommand {
     private static final String PARAM_LIST = "patients";
+
     @Override
     public String execute(HttpServletRequest request) {
         String page;
-        String login = (String)request.getSession().getAttribute(JspParamName.PARAM_LOGIN);
+        String login = (String) request.getSession().getAttribute(JspParamName.PARAM_LOGIN);
         String[] locale = ((String) request.getSession().getAttribute(JspParamName.PARAM_LOCALE)).split("_");
-        ArrayList<Recipe> recipes = (ArrayList<Recipe>)request.getSession().getAttribute(PARAM_LIST);
+        ArrayList<Recipe> recipes = (ArrayList<Recipe>) request.getSession().getAttribute(PARAM_LIST);
         ArrayList<RecipeConfirmation> recipeConfirmations = new ArrayList<>();
-        for(Recipe recipe : recipes) {
+        for (Recipe recipe : recipes) {
             String strConfirm = request.getParameter(recipe.getId().toString());
             Boolean confirm = false;
-            if(strConfirm !=null) {
+            if (strConfirm != null) {
                 confirm = Boolean.parseBoolean(strConfirm);
             }
             RecipeConfirmation recipeConfirmation = new RecipeConfirmation(confirm, recipe.getId());
             recipeConfirmations.add(recipeConfirmation);
         }
         ConfirmRecipesLogic confirmRecipes = new ConfirmRecipesLogic();
-        if(!confirmRecipes.confirm(recipeConfirmations, login)){
+        if (!confirmRecipes.confirm(recipeConfirmations, login)) {
             MessageManager messageManager = new MessageManager(new Locale(locale[0], locale[1]));
             request.setAttribute(JspParamName.PARAM_ERROR_DATABASE,
                     messageManager.getProperty("message.errorDataBase"));

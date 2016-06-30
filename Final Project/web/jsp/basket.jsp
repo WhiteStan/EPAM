@@ -21,7 +21,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/priceCalc.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <title>Title</title>
+    <title><fmt:message key="label.title" bundle="${ rb }" /></title>
 </head>
 <body>
 <%@ include file="common/header.jsp" %>
@@ -46,7 +46,7 @@
                     <td value="${ elem.price}" class="priceDrugs"><c:out value="${ elem.price}"/></td>
                     <c:if test="${elem.recipeNeed eq true}">
                         <td>
-                            <input type="text" name="${elem.name.concat('RecipeId')}">
+                            <input type="text" name="${elem.name.concat('RecipeId')}" pattern="[0-9]*" required>
                         </td>
                     </c:if>
                 </tr>
@@ -55,7 +55,6 @@
         <div class="clearfix">
             <strong style="display: inline-block; float:left;"><fmt:message key="label.totalPrice"
                                                                             bundle="${ rb }"/>: </strong>
-
             <p style="float:left;" class="totalPrice"></p>
         </div>
         <button type="submit"><fmt:message key="label.makeOrder" bundle="${ rb }"/></button>

@@ -3,12 +3,10 @@ package by.epam.pharmacy.command;
 import by.epam.pharmacy.entity.Drug;
 import by.epam.pharmacy.entity.DrugOrdered;
 import by.epam.pharmacy.logic.CheckRecipeLogic;
-import by.epam.pharmacy.logic.DrugSelectLogic;
 import by.epam.pharmacy.logic.MakeOrderLogic;
 import by.epam.pharmacy.resource.JspParamName;
 import by.epam.pharmacy.resource.JspPathName;
 import by.epam.pharmacy.resource.MessageManager;
-import com.mysql.fabric.xmlrpc.base.Array;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -16,7 +14,7 @@ import java.util.HashSet;
 import java.util.Locale;
 
 /**
- * Created by Lenovo on 11.06.2016.
+ * Command to create a new order
  */
 public class MakeOrderCommand implements ActionCommand {
     @Override
@@ -26,8 +24,6 @@ public class MakeOrderCommand implements ActionCommand {
         request.setAttribute(JspParamName.PARAM_LOCALE, request.getParameter(JspParamName.PARAM_LOCALE));
         String role = (String) request.getSession().getAttribute("role");
         String login = (String) request.getSession().getAttribute("login");
-        ArrayList<Drug> listOfDrugs = new ArrayList<>();
-        DrugSelectLogic drugSelectLogic = new DrugSelectLogic();
         HashSet<String> basket = (HashSet<String>) request.getSession().getAttribute("basket");
         ArrayList<Drug> drugsList = (ArrayList<Drug>) request.getSession().getAttribute("drugs");
         ArrayList<DrugOrdered> drugs = new ArrayList<>();
@@ -53,7 +49,7 @@ public class MakeOrderCommand implements ActionCommand {
         } else {
             MessageManager messageManager = new MessageManager(new Locale(locale[0], locale[1]));
             request.setAttribute(JspParamName.PARAM_ERROR_REGISTRATION,
-                    messageManager.getProperty("message.registrerror"));
+                    messageManager.getProperty("message.error"));
         }
         page = JspPathName.PATH_TO_BASKET_JSP;
         request.getSession().setAttribute(JspParamName.PARAM_PAGE, page);
